@@ -5,23 +5,27 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>/ChronosLNX/index.html</loc>
+  <loc>/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/QArithmancy/index.html</loc>
+  <loc>/ChronosLNX/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/QBioBeat/index.html</loc>
+  <loc>/QArithmancy/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/QTarot/index.html</loc>
+  <loc>/QBioBeat/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/about/index.html</loc>
+  <loc>/QTarot/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
+  <loc>/about/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
@@ -29,47 +33,43 @@
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/categories/index.html</loc>
+  <loc>/categories/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/galleries/index.html</loc>
+  <loc>/galleries/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/galleries/screenshots/ChronosLNX/index.html</loc>
+  <loc>/galleries/screenshots/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/galleries/screenshots/index.html</loc>
+  <loc>/galleries/screenshots/ChronosLNX/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/index.html</loc>
+  <loc>/listings/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/listings/index.html</loc>
+  <loc>/pages/ChronosLNX/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/pages/about.html</loc>
+  <loc>/pages/QArithmancy/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/pages/chronoslnx.html</loc>
+  <loc>/pages/QBiobeat/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/pages/qarithmancy.html</loc>
+  <loc>/pages/QTarot/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
-  <loc>/pages/qbiobeat.html</loc>
-  <lastmod>2014-07-18</lastmod>
- </url>
- <url>
-  <loc>/pages/qtarot.html</loc>
+  <loc>/pages/about/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
 </urlset>

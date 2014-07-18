@@ -1,6 +1,6 @@
 <!-- 
 .. title: ChronosLNX
-.. slug: chronoslnx
+.. slug: ChronosLNX
 .. date: 2014-07-17 22:58:02 UTC-07:00
 .. tags: 
 .. link: 
