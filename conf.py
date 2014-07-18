@@ -653,10 +653,14 @@ MARKDOWN_EXTENSIONS = ['tables', 'fenced_code', 'nl2br', 'strkundr', 'codehilite
 # Or a duckduckgo search: https://duckduckgo.com/search_box.html
 # Default is no search form.
 # (translatable)
-SEARCH_FORM = """
+SEARCH_FORM = """<ul class="nav navbar-nav">
+<li>
 <span class="navbar-form pull-left">
 <input type="text" id="tipue_search_input">
-</span>"""
+</span>
+</li>
+</ul>
+"""
 #
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
