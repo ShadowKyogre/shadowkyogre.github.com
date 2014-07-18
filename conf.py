@@ -653,7 +653,10 @@ MARKDOWN_EXTENSIONS = ['tables', 'fenced_code', 'nl2br', 'strkundr', 'codehilite
 # Or a duckduckgo search: https://duckduckgo.com/search_box.html
 # Default is no search form.
 # (translatable)
-# SEARCH_FORM = ""
+SEARCH_FORM = """
+<span class="navbar-form pull-left">
+<input type="text" id="tipue_search_input">
+</span>"""
 #
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
@@ -694,11 +697,26 @@ MARKDOWN_EXTENSIONS = ['tables', 'fenced_code', 'nl2br', 'strkundr', 'codehilite
 # Extra things you want in the pages HEAD tag. This will be added right
 # before </head>
 # (translatable)
-# EXTRA_HEAD_DATA = ""
+EXTRA_HEAD_DATA = """
+<link rel="stylesheet" type="text/css" href="/assets/css/tipuesearch.css">
+<div id="tipue_search_content" style="margin-left: auto; margin-right: auto; padding: 20px;"></div>
+"""
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-# BODY_END = ""
+BODY_END = """
+<script type="text/javascript" src="/assets/js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="/assets/js/tipuesearch.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        'mode': 'json',
+        'contentLocation': '/assets/js/tipuesearch_content.json',
+        'showUrl': false
+    });
+});
+</script>
+"""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
