@@ -1,6 +1,6 @@
 <!-- 
 .. title: QArithmancy
-.. slug: qarithmancy
+.. slug: QArithmancy
 .. date: 2014-07-18 01:17:07 UTC-07:00
 .. tags: 
 .. link: 

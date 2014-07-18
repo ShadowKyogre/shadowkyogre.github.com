@@ -22,37 +22,37 @@
 <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
     <header>
         ${pheader.html_title()}
-		<span class="small">
-			by 
-			<a href="http://github.com/${post.author()}">
-				${post.author()}
-			</a>
-		</span>
+        <span class="small">
+            by 
+            <a href="http://github.com/${post.author()}">
+                ${post.author()}
+            </a>
+        </span>
         ${pheader.html_translations(post)}
     </header>
     <div itemprop="articleBody text">
-		<a href="http://github.com/${post.author()}/${post.title()}">
-			<img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" class="forkme-button"></img>
-		</a>
-		${post.text()}
-		<h2>Download</h2>
+        <a href="http://github.com/${post.author()}/${post.title()}">
+            <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" class="forkme-button"></img>
+        </a>
+        ${post.text()}
+        <h2>Download</h2>
 
-		<a href="http://github.com/${post.author()}/${post.title()}/zipball/master">
-			<img alt="zip" src="http://github.com/images/modules/download/zip.png"></img>
-		</a>
+        <a href="http://github.com/${post.author()}/${post.title()}/zipball/master">
+            <img alt="zip" src="http://github.com/images/modules/download/zip.png"></img>
+        </a>
 
-		<a href="http://github.com/${post.author()}/${post.title()}/tarball/master">
-			<img alt="tar" src="http://github.com/images/modules/download/tar.png"></img>
-		</a>
+        <a href="http://github.com/${post.author()}/${post.title()}/tarball/master">
+            <img alt="tar" src="http://github.com/images/modules/download/tar.png"></img>
+        </a>
 
-		<br />
-		You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
-		<br />
-		<code>
-			$ git clone git://github.com/${post.author()}/${post.title()}
-		</code>
-		<br />
-		Get the source code on GitHub : <a href="http://github.com/${post.author()}/${post.title()}">${post.author()}/${post.title()}</a>
+        <br />
+        You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
+        <br />
+        <code>
+            $ git clone git://github.com/${post.author()}/${post.title()}
+        </code>
+        <br />
+        Get the source code on GitHub : <a href="http://github.com/${post.author()}/${post.title()}">${post.author()}/${post.title()}</a>
     </div>
     %if site_has_comments and enable_comments and not post.meta('nocomments'):
         <section class="comments">

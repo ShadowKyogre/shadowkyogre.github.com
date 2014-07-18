@@ -1,6 +1,6 @@
 <!-- 
 .. title: QBioBeat
-.. slug: qbiobeat
+.. slug: QBiobeat
 .. date: 2014-07-18 01:17:12 UTC-07:00
 .. tags: 
 .. link: 

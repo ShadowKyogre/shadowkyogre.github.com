@@ -189,7 +189,7 @@ POSTS = (
     #("posts/*.txt", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.md", "pages", "story.tmpl"),
+    ("pages/*.md", "", "story.tmpl"),
     #("stories/*.txt", "stories", "story.tmpl"),
 )
 
@@ -302,11 +302,15 @@ post_compilers = {
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = [("QTarot/index.html","/pages/qtarot.html"),
+
+REDIRECTIONS = []
+"""
+("QTarot/index.html","/pages/qtarot.html"),
                 ("QBioBeat/index.html","/pages/qbiobeat.html"),
                 ("QArithmancy/index.html","/pages/qarithmancy.html"),
                 ("ChronosLNX/index.html","/pages/chronoslnx.html"),
-                ("about/index.html","/pages/about.html"),]
+                ("about/index.html","/pages/about.html"),
+"""
 
 # Commands to execute to deploy. Can be anything, for example,
 # you may use rsync:
@@ -550,7 +554,7 @@ COMMENT_SYSTEM_ID = ""
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata
-# PRETTY_URLS = False
+PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.
@@ -713,7 +717,7 @@ MARKDOWN_EXTENSIONS = ['tables', 'fenced_code', 'nl2br', 'strkundr', 'codehilite
 
 # If you hate "Filenames with Capital Letters and Spaces.md", you should
 # set this to true.
-UNSLUGIFY_TITLES = True
+UNSLUGIFY_TITLES = False
 
 # Additional metadata that is added to a post when creating a new_post
 # ADDITIONAL_METADATA = {}
