@@ -25,6 +25,11 @@
         <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
 
     
+<link rel="stylesheet" type="text/css" href="../assets/css/tipuesearch.css">
+</head>
+<body>
+<div id="tipue_search_content" style="margin-left: auto; margin-right: auto; padding: 20px;"></div>
+
 
 
     
@@ -58,8 +63,8 @@
         <meta name="description" itemprop="description" content="A simple tool for checking planetary hours and the moon phase.">
 
 
-</head>
-<body>
+
+
 
 <!-- Menubar -->
 
@@ -157,6 +162,10 @@
                 
             </li>
 </ul>
+                
+<span class="navbar-form pull-left">
+<input type="text" id="tipue_search_input">
+</span>
 
             <ul class="nav navbar-nav navbar-right">
                 
@@ -291,6 +300,19 @@
 
     <script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
     
+
+<script type="text/javascript" src="../assets/js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="../assets/js/tipuesearch.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        'mode': 'json',
+        'contentLocation': '/assets/js/tipuesearch_content.json',
+        'showUrl': false
+    });
+});
+</script>
+
 
 
 </body>

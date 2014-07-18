@@ -3,3 +3,19 @@
 	top: 50px;
 	right: 0px;
 }
+
+
+/** Aesthetic tipue overrides **/
+#tipue_search_input {
+	color: inherit !important;
+	border: 1px solid #5D0015 !important;
+	background: #010C1F !important;
+}
+
+#tipue_search_warning_head {
+	color: inherit !important;
+}
+
+.tipue_search_content_text {
+	color: inherit !important;
+}
