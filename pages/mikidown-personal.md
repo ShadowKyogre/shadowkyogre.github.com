@@ -5,6 +5,7 @@
 .. tags: 
 .. link: 
 .. template: github-project.tmpl
+.. contributors: [('ShadowKyogre', '/about'),('rnons','https://github.com/rnons')]
 .. description: 
 .. type: text
 -->

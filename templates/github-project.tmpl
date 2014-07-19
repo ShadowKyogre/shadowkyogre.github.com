@@ -19,45 +19,29 @@
 </%block>
 
 <%block name="content">
-<% import ast %>
 <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
     <header>
-        ${pheader.html_title()} 
+        ${pheader.html_title()}
         <span class="small">
             by 
-            %if post.meta('contributors'):
-                %for contributor in ast.literal_eval(post.meta('contributors')):
-                    %if loop.last and loop.index > 0:
-                    and 
-                    %endif
-                    <a href="${contributor[1]}">${contributor[0]}</a>
-                    %if not loop.last and loop.reverse_index > 1:
-                    , 
-                    %endif
-                %endfor
-            %endif
+            <a href="http://github.com/${post.author()}">
+                ${post.author()}
+            </a>
         </span>
         ${pheader.html_translations(post)}
     </header>
     <div itemprop="articleBody text">
-        <a href="http://github.com/${post.author()}/${post.title()}">
+        <a href="http://github.com/${post.author()}/${post.meta('slug')}">
             <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" class="forkme-button"></img>
         </a>
-
-        <h2>Screenshots</h2>
-        All screenshots are located <a href="/galleries/screenshots/${post.meta('slug')}">here</a>
-
-        <h2>What <i>is</i> this?</h2>
-
         ${post.text()}
-
         <h2>Download</h2>
 
-        <a href="http://github.com/${post.author()}/${post.title()}/zipball/master">
+        <a href="http://github.com/${post.author()}/${post.meta('slug')}/zipball/master">
             <img alt="zip" src="http://github.com/images/modules/download/zip.png"></img>
         </a>
 
-        <a href="http://github.com/${post.author()}/${post.title()}/tarball/master">
+        <a href="http://github.com/${post.author()}/${post.meta('slug')}/tarball/master">
             <img alt="tar" src="http://github.com/images/modules/download/tar.png"></img>
         </a>
 
@@ -65,10 +49,10 @@
         You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
         <br />
         <code>
-            $ git clone git://github.com/${post.author()}/${post.title()}
+            $ git clone git://github.com/${post.author()}/${post.meta('slug')}
         </code>
         <br />
-        Get the source code on GitHub : <a href="http://github.com/${post.author()}/${post.title()}">${post.author()}/${post.title()}</a>
+        Get the source code on GitHub : <a href="http://github.com/${post.author()}/${post.meta('slug')}">${post.author()}/${post.meta('slug')}</a>
     </div>
     %if site_has_comments and enable_comments and not post.meta('nocomments'):
         <section class="comments">
