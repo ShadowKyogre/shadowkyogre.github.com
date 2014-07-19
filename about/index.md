@@ -55,10 +55,10 @@ So, here I am, using Arch Linux as my primary OS on my desktop, though my laptop
 * [Compiz Boxmenu](/Compiz-Boxmenu) [[repo]](https://github.com/ShadowKyogre/Compiz-Boxmenu) (original was Compiz Deskmenu)
 * [Compiz Standalone Utils](/Compiz-Standalone-Utils) [[repo]](https://github.com/ShadowKyogre/Compiz-Standalone-Utils) (original was some of the stuff from Openbox that helps with this)
 * [GTK3 port of Openastro](https://github.com/ShadowKyogre/openastro-dev)
-* [Mikidown (Whoosh branch, aka, mostly copy of rnons' copy while waiting for perms for writing to repo)](https://github.com/ShadowKyogre/mikidown/tree/whoosh)
+* [Mikidown](/mikidown)[[repo]](https://github.com/ShadowKyogre/mikidown)
 
 # Stuff that I forked just to make personal tweaks
 * [Keyboard Tiler Python port](https://github.com/ShadowKyogre/keyboard-tiler)
 * [CDM](https://github.com/ShadowKyogre/cdm)
 * [Deepin Screenshot](https://github.com/ShadowKyogre/deepin-screenshot)
-* [Mikidown](https://github.com/ShadowKyogre/mikidown/tree/master)
+* [Mikidown (personal copy)](/mikidown-personal) Will need to re-upload later.
