@@ -2,6 +2,7 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
     <head>
     <meta charset="utf-8">
+    <meta name="description" content="A simple tarot fortune teller">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>QTarot | ShadowKyogre's GitHub</title>
 
@@ -38,7 +39,7 @@
     
         <meta name="og:title" content="QTarot">
         <meta name="og:url" content="/QTarot/">
-            <meta name="og:description" content="Write your page here.">
+            <meta name="og:description" content="A simple tarot fortune teller">
         <meta name="og:site_name" content="ShadowKyogre's GitHub">
         <meta name="og:type" content="article">
 
@@ -51,7 +52,7 @@
     
         <meta name="og:title" content="QTarot">
         <meta name="og:url" content="/QTarot/">
-            <meta name="og:description" content="Write your page here.">
+            <meta name="og:description" content="A simple tarot fortune teller">
         <meta name="og:site_name" content="ShadowKyogre's GitHub">
         <meta name="og:type" content="article">
 
@@ -59,6 +60,7 @@
 
     
 
+        <meta name="description" itemprop="description" content="A simple tarot fortune teller">
 
 
 
@@ -193,16 +195,15 @@
         <div class="row">
             
             
+
 <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
     <header>
         
     <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">QTarot</a></h1>
-
+ 
         <span class="small">
             by 
-            <a href="http://github.com/ShadowKyogre">
-                ShadowKyogre
-            </a>
+                    <a href="../about">ShadowKyogre</a>
         </span>
         
 
@@ -211,7 +212,54 @@
         <a href="http://github.com/ShadowKyogre/QTarot">
             <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" class="forkme-button">
         </a>
-        Write your page here.
+
+        <h2>Screenshots</h2>
+        All screenshots are located <a href="../galleries/screenshots/QTarot">here</a>
+
+        <h2>What <i>is</i> this?</h2>
+
+        <p>QTarot is a simple fortune telling app for Linux systems primarily. It works on Windows too. I'm pretty sure it works on Macs. Currently only has the Rider-Waite deck and the Elder Futhark, but more can be added. You can also change the background image for the current reading.</p>
+<h2 id="todo">Todo</h2>
+<ul>
+<li>Make a GUI editor for deck definitions</li>
+<li>Make a GUI editor for layouts</li>
+<li>Make only the basename for an image in a deck definition matter</li>
+<li>Actually fill out the Elder Futhark deck definition</li>
+<li>More deck themes :|.</li>
+<li>Streamline the GUI for making a new reading with another deck definition</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>Python 3</li>
+<li>PyQt</li>
+<li>lxml</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>Copy the files to /usr/share/qtarot if you plan to use the *.desktop file included. If not, feel free to leave it where you downloaded it or place it somewhere else.</p>
+<h2 id="license">License</h2>
+<p>GPL</p>
+<h2 id="credits">Credits</h2>
+<p>Inspired by <a href="http://www.zyqote.com/Linux/pub/tarot/">http://www.zyqote.com/Linux/pub/tarot/</a> and <a href="http://linux.softpedia.com/get/Education/Qtarot-18925.shtml">http://linux.softpedia.com/get/Education/Qtarot-18925.shtml</a>.<br>
+Default deck and table also are from here.</p>
+<h3 id="deck-definitions">Deck definitions</h3>
+<ul>
+<li>Teaser deck definitions for the Rider-Waite deck are courtesy of <a href="http://www.biddytarot.com">Biddy Tarot</a>. Please check out her page by clicking her name.</li>
+</ul>
+<h3 id="layout-sources">Layout sources</h3>
+<ul>
+<li><a href="http://www.tryskelion.com/tryskelion/planetary.htm">http://www.tryskelion.com/tryskelion/planetary.htm</a></li>
+<li><a href="http://www.readtarot.com/spreads.html">http://www.readtarot.com/spreads.html</a></li>
+<li><a href="http://www.learntarot.com/yinyang.htm">http://www.learntarot.com/yinyang.htm</a></li>
+</ul>
+<h3 id="stuff-i-looked-up-while-writing-not-related-to-layouts">Stuff I looked up while writing not related to layouts</h3>
+<ul>
+<li><a href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html">http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html</a></li>
+<li><a href="http://stackoverflow.com/questions/7451183/how-to-create-image-file-from-qgraphicsscene-qgraphicsview">http://stackoverflow.com/questions/7451183/how-to-create-image-file-from-qgraphicsscene-qgraphicsview</a></li>
+<li><a href="http://www.qtcentre.org/wiki/index.php?title=QGraphicsView:_Smooth_Panning_and_Zooming#Zooming">http://www.qtcentre.org/wiki/index.php?title=QGraphicsView:_Smooth_Panning_and_Zooming#Zooming</a></li>
+<li><a href="http://thesmithfam.org/blog/2007/02/03/qt-improving-qgraphicsview-performance/">http://thesmithfam.org/blog/2007/02/03/qt-improving-qgraphicsview-performance/</a></li>
+<li><a href="http://kunalmaemo.blogspot.com/2010/07/rotation-and-mirroring-qgraphicsitem-in.html">http://kunalmaemo.blogspot.com/2010/07/rotation-and-mirroring-qgraphicsitem-in.html</a></li>
+</ul>
+
         <h2>Download</h2>
 
         <a href="http://github.com/ShadowKyogre/QTarot/zipball/master">
