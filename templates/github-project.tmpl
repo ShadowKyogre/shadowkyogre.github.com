@@ -23,10 +23,18 @@
     <header>
         ${pheader.html_title()}
         <span class="small">
-            by 
-            <a href="http://github.com/${post.author()}">
-                ${post.author()}
-            </a>
+            by
+            %if post.meta('contributors'):
+                %for contributor in ast.literal_eval(post.meta('contributors')):
+                    %if loop.last and loop.index > 0:
+                    and
+                    %endif
+                    <a href="${contributor[1]}">${contributor[0]}</a>
+                    %if not loop.last and loop.reverse_index > 1:
+                    ,
+                    %endif
+                %endfor
+            %endif
         </span>
         ${pheader.html_translations(post)}
     </header>
@@ -34,6 +42,12 @@
         <a href="http://github.com/${post.author()}/${post.meta('slug')}">
             <img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" class="forkme-button"></img>
         </a>
+
+        <h2>Screenshots</h2>
+        All screenshots are located <a href="/galleries/screenshots/${post.meta('slug')}">here</a>
+
+        <h2>What <i>is</i> this?</h2>
+
         ${post.text()}
         <h2>Download</h2>
 
