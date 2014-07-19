@@ -1,33 +1,33 @@
 {
   "pages": [
     {
-      "tags": "",
-      "title": "QBioBeat",
       "text": "Write your page here.\nTodo\n\nCompatibility reports\nLabel each grid line with the date it's associated with\nProbably find a way to integrate matplotlib with this to make this easier?\n\nDependencies\n\nPython 3\nPyQt\n\nInstall\nCopy the files to /usr/share/qbiobeat if you plan to use the *.desktop file included. If not, feel free to leave it where you downloaded it or place it somewhere else.\nLicense\nGPL",
+      "title": "QBioBeat",
+      "tags": "",
       "loc": "/QBiobeat/"
     },
     {
-      "tags": "",
-      "title": "QArithmancy",
       "text": "QArithmancy is comprehensive numerology application using PyQt.\nTodo\n\nOther than compatibility numerology stuff, nothing.\n\nDependencies\n\nPython 3\nPyQt\npython-dateutil\n\nInstall\nCopy the files to /usr/share/qarithmancy if you plan to use the *.desktop file included. If not, feel free to leave it where you downloaded it or place it somewhere else.\nLicense\nGPL\nCredits\n\nUses much of the methods documented on Hans Decoz's website. There ARE plans to include alternate calculation methods. I just don't know them.",
+      "title": "QArithmancy",
+      "tags": "",
       "loc": "/QArithmancy/"
     },
     {
-      "tags": "",
-      "title": "ChronosLNX",
       "text": "ChronosLNX is somewhat of a clone of ChronosXP for Linux systems primarily, although it will work on Windows and Macs, I think. It has most of the basic features of ChronosXP, but it might be missing some.\nIf you have suggestions for lightening up or tidying up the code, visit the Issues page for it and bug me about it.\nTodo\n\nFind an alternate sunrise/sunset method to make this lighter\nFind an alternate moon phase method to make this lighter\nAdd play a sound action to the events\nAlerts for aspects, moon phase, planet in certain sign, etc.\n\nDependencies\n\nPython 3\nPyQt\nPySwisseph\npython-dateutil\n\nInstall\nCopy the files to /usr/share/chronoslnx if you plan to use the *.desktop file included. If not, feel free to leave it where you downloaded it or place it somewhere else. You can also replace the icons for the planets and the program if you want to.\nLicense\nGPL\nCredits\n\nClock script I came across to start off the code\nMinimizing to system tray.\nAnd if it hasn't been said before, ChronosXP.\nOther random sources pasted throughout the code",
+      "title": "ChronosLNX",
+      "tags": "",
       "loc": "/ChronosLNX/"
     },
     {
-      "tags": "",
-      "title": "Shadowkyogre's Github profile",
       "text": "A little bit about myself\nI'm commonly referred to as Saph or ShadowKyogre, depending on how one first comes across me. Anyway, I started my trek into Linux quite a few years ago with Puppy Linux. After that, I started using PCLinuxOS since looked so similar to Windows XP if configured right. I started hopping between PCLinuxOS, Arch Linux, and Windows XP for a while before finally settling down with Arch.\n\nSo, here I am, using Arch Linux as my primary OS on my desktop, though my laptop still dual boots with Arch Linux and Windows 7.\nHobbies\n\nProgramming\nDrawing\nWriting\nRoleplaying\nPlaying videogames\nOgling random webpages\n\nContact\n\nfreenode IRC Nickname: ShadowKyogre\ndA Username: ShadowKyogre\nAUR/Arch Linux Forums Username: ShadowKyogre\nEmail: shadowkyogre.public@gmail.com\nAIM: ShadowKyogre\nMSN/Skype: Ask\nYahoo: Ask\n\nSome random goodies\n\nMy underwhelming collection of dotfiles\nMy collection of random scripts\nBuildscripts for packages on various distros. Primarily consists of PKGBUILDs and *.specs so far.\nMaaaaad libs\nGimp plugins I've made\nGet some free storage space on Dropbox\nOr get that free space on Copy.com if that's your thing\n\nCompletely original projects\n\nChronosLNX [repo]\nQArithmancy [repo]\nQBioBeat [repo]\nQTarot [repo] (mostly functional, but on pause for GUI deck editor and GUI layout editor)\nInQantation [repo] (stuck on trying to figure out how to structure the DB and whether or not it's redundant with note taking apps other ppl'd use for this sort of thing)\nNCDM [repo]\nA systemd unit converter\nSane ninit boot defaults\n\nStuff that I've forked and maintain regularly\n\nCompiz Boxmenu [repo] (original was Compiz Deskmenu)\nCompiz Standalone Utils [repo] (original was some of the stuff from Openbox that helps with this)\nGTK3 port of Openastro\nMikidown (Whoosh branch, aka, mostly copy of rnons' copy while waiting for perms for writing to repo)\n\nStuff that I forked just to make personal tweaks\n\nKeyboard Tiler Python port\nCDM\nDeepin Screenshot\nMikidown",
+      "title": "Shadowkyogre's Github profile",
+      "tags": "",
       "loc": "/about/"
     },
     {
-      "tags": "",
-      "title": "QTarot",
       "text": "QTarot is a simple fortune telling app for Linux systems primarily. It works on Windows too. I'm pretty sure it works on Macs. Currently only has the Rider-Waite deck and the Elder Futhark, but more can be added. You can also change the background image for the current reading.\nTodo\n\nMake a GUI editor for deck definitions\nMake a GUI editor for layouts\nMake only the basename for an image in a deck definition matter\nActually fill out the Elder Futhark deck definition\nMore deck themes :|.\nStreamline the GUI for making a new reading with another deck definition\n\nDependencies\n\nPython 3\nPyQt\nlxml\n\nInstall\nCopy the files to /usr/share/qtarot if you plan to use the *.desktop file included. If not, feel free to leave it where you downloaded it or place it somewhere else.\nLicense\nGPL\nCredits\nInspired by http://www.zyqote.com/Linux/pub/tarot/ and http://linux.softpedia.com/get/Education/Qtarot-18925.shtml.\nDefault deck and table also are from here.\nDeck definitions\n\nTeaser deck definitions for the Rider-Waite deck are courtesy of Biddy Tarot. Please check out her page by clicking her name.\n\nLayout sources\n\nhttp://www.tryskelion.com/tryskelion/planetary.htm\nhttp://www.readtarot.com/spreads.html\nhttp://www.learntarot.com/yinyang.htm\n\nStuff I looked up while writing not related to layouts\n\nhttp://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html\nhttp://stackoverflow.com/questions/7451183/how-to-create-image-file-from-qgraphicsscene-qgraphicsview\nhttp://www.qtcentre.org/wiki/index.php?title=QGraphicsView:_Smooth_Panning_and_Zooming#Zooming\nhttp://thesmithfam.org/blog/2007/02/03/qt-improving-qgraphicsview-performance/\nhttp://kunalmaemo.blogspot.com/2010/07/rotation-and-mirroring-qgraphicsitem-in.html",
+      "title": "QTarot",
+      "tags": "",
       "loc": "/QTarot/"
     }
   ]

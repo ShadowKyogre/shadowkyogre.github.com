@@ -4,6 +4,12 @@
 	right: 0px;
 }
 
+/** AddToAny **/
+.a2a_dd img {
+	position:fixed;
+	bottom: 0;
+	right: 0;
+}
 
 /** Aesthetic tipue overrides **/
 #tipue_search_input {
