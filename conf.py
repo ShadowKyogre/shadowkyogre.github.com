@@ -111,11 +111,11 @@ NAVIGATION_LINKS = {
             ("/Compiz-Boxmenu","Compiz Boxmenu"),
             ("/Compiz-Standalone","Compiz Standalone Utils"),
             ("/openastro-dev","GTK3 port of Openastro"),
-            ("https://rnons.github.io/mikidown","Mikidown (whoosh branch, rnons copy)"),
+            ("/mikidown","Mikidown"),
             ),
         "Srs Forks"),
         ((
-            ("/mikidown","Mikidown (personal copy)"),
+            ("/mikidown-personal","Mikidown (personal copy)"),
             ("/keyboard-tiler","Keyboard Tiler (python port)"),
             ("https://github.com/ShadowKyogre/deepin-screenshot","Deepin Screenshot"),
             ("https://github.com/ShadowKyogre/cdm","CDM"),
