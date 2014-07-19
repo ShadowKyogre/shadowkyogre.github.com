@@ -61,4 +61,4 @@ So, here I am, using Arch Linux as my primary OS on my desktop, though my laptop
 * [Keyboard Tiler Python port](https://github.com/ShadowKyogre/keyboard-tiler)
 * [CDM](https://github.com/ShadowKyogre/cdm)
 * [Deepin Screenshot](https://github.com/ShadowKyogre/deepin-screenshot)
-* [Mikidown (personal copy)](/mikidown-personal) Will need to re-upload later.
+* [Mikidown (personal copy)](/mikidown-personal) [[repo]](https://github.com/ShadowKyogre/mikidown-personal)
