@@ -621,7 +621,23 @@ MARKDOWN_EXTENSIONS = ['tables', 'fenced_code', 'nl2br', 'strkundr', 'codehilite
 # <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
 # <!-- End of social buttons -->
 # """
-
+SOCIAL_BUTTONS_CODE="""
+<!-- AddToAny BEGIN -->
+<a class="a2a_dd" href="http://www.addtoany.com/share_save"><img src="http://static.addtoany.com/buttons/favicon.png" width="16" height="16" border="0" alt="Share"/></a>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.onclick = 1;
+a2a_config.color_main = "06008f";
+a2a_config.color_border = "e6005f";
+a2a_config.color_link_text = "004dff";
+a2a_config.color_link_text_hover = "007ee0";
+a2a_config.color_bg = "000a42";
+a2a_config.color_arrow = "fff";
+a2a_config.color_arrow_hover = "fff";
+</script>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+"""
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
 # SHOW_SOURCELINK = True
