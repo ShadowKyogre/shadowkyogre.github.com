@@ -1,2 +1,5 @@
 mdx_strkundr.py
 .doit.db
+conf.py
+cache/
+__pycache__/
