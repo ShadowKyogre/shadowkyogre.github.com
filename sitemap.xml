@@ -9,6 +9,10 @@
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
+  <loc>/2014/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
   <loc>/ChronosLNX/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
@@ -37,6 +41,22 @@
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
+  <loc>/categories/github/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
+  <loc>/categories/nikola/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
+  <loc>/categories/oh-wow-this-is-really-easy/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
+  <loc>/categories/python/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
   <loc>/galleries/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
@@ -58,6 +78,10 @@
  </url>
  <url>
   <loc>/galleries/screenshots/QTarot/</loc>
+  <lastmod>2014-07-18</lastmod>
+ </url>
+ <url>
+  <loc>/posts/transferred-github-pages-generator-to-nikola-generated-site/</loc>
   <lastmod>2014-07-18</lastmod>
  </url>
  <url>
