@@ -8,6 +8,7 @@
 .. author: ShadowKyogre
 .. description: 
 .. type: text
+.. contributors: [('ShadowKyogre', '/about'),]
 -->
 
 Write your page here.

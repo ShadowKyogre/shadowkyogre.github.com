@@ -8,6 +8,7 @@
 .. author: ShadowKyogre
 .. description: 
 .. type: text
+.. contributors: [('ShadowKyogre', '/about'),]
 -->
 
 QArithmancy is comprehensive numerology application using PyQt.
