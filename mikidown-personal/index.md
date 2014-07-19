@@ -4,6 +4,7 @@
 .. date: 2014-07-18 23:22:20 UTC-07:00
 .. tags: 
 .. link: 
+.. template: github-project.tmpl
 .. description: 
 .. type: text
 -->
