@@ -4,6 +4,20 @@
 	right: 0px;
 }
 
+/** tags **/
+.tags > li,
+.tags > li a {
+	color: inherit !important;
+}
+
+.tags > li {
+	background: #160004 !important;
+}
+
+.badge {
+	color: black !important;
+}
+
 /** AddToAny **/
 .a2a_dd img {
 	position:fixed;
