@@ -10,4 +10,4 @@
 .. type: text
 -->
 
-It's like [the original mikidown](/mikidown), but different. It doesn't have a site generator. Nor does it have whoosh. But it DOES work on Windows. It also uses a QPlainTextEdit in place of a QTextEdit. That's it.
+It's like [the original mikidown](/mikidown), but different. It doesn't have a site generator. Nor does it have whoosh. Or the TOC for the edit window. But it DOES work on Windows. It also uses a QPlainTextEdit in place of a QTextEdit. That's it.
