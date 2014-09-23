@@ -231,8 +231,10 @@ the services you want in the correct order before halting.</p>
 <h3 id="optional-pretty-messages-for-every-section-started">Optional: pretty messages for every section started</h3>
 <p>[Edit]: Forgot to fill this section out. Basically, all that's needed for this is a setup file that echos out a simple message.</p>
 <h3 id="depends-arent-really-depends-more-like-start-before">Depends aren't really "depends" - more like "start before"</h3>
-<p>Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success or are running.<br>
-Some ways to work around this include:</p>
+<p>Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success <del>or are running</del>. <br>
+Just ran some tests in my test box. Didn't seem to restart dbus even when I had two things dependent on it. However, statement about<br>
+whether something finishes with success is still valid.</p>
+<p>Some ways to work around this include:</p>
 <ul>
 <li>Specify the order daemons are started in like /etc/rc.conf, except with /etc/ninit/daemon/depends: Simple enough work around. <br>
 Everything's also started in parallel like this.</li>
