@@ -39,11 +39,12 @@
     
     <meta name="og:title" content="My Experiences with ninit [Part 1]">
     <meta name="og:url" content="/posts/my-experiences-with-ninit-part-1/">
-    <meta name="og:description" content="This post is a collection of notes of the process I went through to take out systemd for ninit. Pardon for the scarcity, but I'll revisit this with better descriptions.
+    <meta name="og:description" content="This post is a collection of notes of the process I went through to take out 
+systemd for ninit. Pardon for the scarcity, but I'll revisit this with better descriptions.
 What IS ninit?
 Preparation
 
-Ins">
+In">
     <meta name="og:site_name" content="ShadowKyogre's GitHub">
     <meta name="og:type" content="article">
 
@@ -204,14 +205,16 @@ Ins">
 
     <div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>This post is a collection of notes of the process I went through to take out systemd for ninit. Pardon for the scarcity, but I'll revisit this with better descriptions.</p>
+<p>This post is a collection of notes of the process I went through to take out <br>
+systemd for ninit. Pardon for the scarcity, but I'll revisit this with better descriptions.</p>
 <h2 id="what-is-ninit">What IS ninit?</h2>
 <h2 id="preparation">Preparation</h2>
 <ol>
 <li>Install procps-ng-nosystemd</li>
 <li>Temporary symlink to systemd-udevd</li>
 <li>Install ninit</li>
-<li>Set up service directories. You can find a rough copy (though not perfectly synced) copy of my /etc/ninit dir <a href="github.com/shadowkyogre/ninit-boot">here</a>
+<li>Set up service directories. You can find a rough copy (though not perfectly <br>
+synced) copy of my /etc/ninit dir <a href="github.com/shadowkyogre/ninit-boot">here</a>
 </li>
 <li>Reboot</li>
 </ol>
@@ -224,37 +227,52 @@ Ins">
 <li>Reboot to test things</li>
 </ol>
 <h3 id="nsvc-o-haltreboot-vs-ninit-shutdown-or">nsvc -o {halt,reboot} vs ninit-shutdown -{o,r}</h3>
-<p>I recommend ninit-shutdown -{o,r} if you don't want to manually handle turning services off before<br>
-doing shutdown preparations. ninit-shutdown also assumes quite a few things about how a system should<br>
-be cleaned up, so if you want more control, you're going to have to create a service to manually shutdown<br>
+<p>I recommend ninit-shutdown -{o,r} if you don't want to manually handle turning <br>
+services off before doing shutdown preparations in the halt service. ninit-shutdown <br>
+also assumes quite a few things about how a system should be cleaned up, so if you <br>
+want more control, you're going to have to fiddle with the halt service to shutdown <br>
 the services you want in the correct order before halting.</p>
 <h3 id="optional-pretty-messages-for-every-section-started">Optional: pretty messages for every section started</h3>
-<p>[Edit]: Forgot to fill this section out. Basically, all that's needed for this is a setup file that echos out a simple message.</p>
+<p>[Edit]: Forgot to fill this section out. Basically, all that's needed for this is a <br>
+setup file that echos out a simple message.</p>
 <h3 id="depends-arent-really-depends-more-like-start-before">Depends aren't really "depends" - more like "start before"</h3>
-<p>Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success <del>or are running</del>. <br>
-Just ran some tests in my test box. Didn't seem to restart dbus even when I had two things dependent on it. However, statement about<br>
-whether something finishes with success is still valid.</p>
+<p>Title says it all. ninit won't actually check if the services that a service depends <br>
+on have finished executing with success <del>or are running</del>. Just ran some tests in my <br>
+test box. Didn't seem to restart dbus even when I had two things dependent on it. <br>
+However, statement about whether something finishes with success is still valid.</p>
 <p>Some ways to work around this include:</p>
 <ul>
-<li>Specify the order daemons are started in like /etc/rc.conf, except with /etc/ninit/daemon/depends: Simple enough work around. <br>
-Everything's also started in parallel like this.</li>
-<li>Patch ninit to include a separate file for services (opt) that specifies true deps that're only run once OR modifies the depends of certain <br>
-services once it's done running: Too complex, but could be done.</li>
-<li>Use setup, rsetup, or sys-rsetup to do the dependency checking for shared dependencies: One of the things that the ninit docs <strong>don't</strong> tell you <br>
-is that using nsvc as a synced or waited service is NOT a good idea (nor as a services that's in depends either). I really wouldn't recommend this <br>
-because this makes things complex.</li>
+<li>Specify the order daemons are started in like /etc/rc.conf, except with <br>
+/etc/ninit/daemon/depends: Simple enough work around. Everything's also started <br>
+in parallel like this.</li>
+<li>Patch ninit <del>to include a separate file for services (opt) that specifies true <br>
+deps that're only run once OR modifies the depends of certain services once it's <br>
+done running: Too complex, but could be done.</del> to do something about the return <br>
+code for one-run services.</li>
+<li>
+<del>Use setup, rsetup, or sys-rsetup to do the dependency checking for shared <br>
+dependencies: One of the things that the ninit docs <strong>don't</strong> tell you is that using <br>
+nsvc as a synced or waited service is NOT a good idea (nor as a services that's in <br>
+depends either). I really wouldn't recommend this because this makes things complex.</del> <br>
+Only applicable for one-run services.</li>
 </ul>
 <h2 id="thoughts">Thoughts</h2>
-<p>ninit's good enough if you've got a static configuration that doesn't have too many depends that can be easily manually managed. It also doesn't seem to<br>
-keep track of exit codes for error spotting (since a service could fail, but report back as finished. This is especially bad in moutning cases unless<br>
-someone writes a wrapper to do something on that error). However, it'll happily report if something failed to run if it was a continuous service. There <br>
-also isn't much documentation on what the nsvc -L output indicates. I'll try to document these later.</p>
-<p>For true depends, I'd recommend something else (at least until I can figure out how to patch the run helper in ninit to work around this). <br>
-I'm thinking of maybe also trying out busybox init+(monit or perp), initng, OpenRC, or initscripts-fork. Currently, I'm interested in trying monit <br>
-(even though this'd probably be a little too big for my own needs) since it does this dependency checking on its own and provides some additional <br>
-security features that can be coded (eg: stop running a compromised service). The only thing that scares me about it is that it prefers pid files <br>
-instead of being a direct parent of the process (as evidenced by with matching|pidfile when asking what to check for a pid). I just need to figure out <br>
-which init system to run it from before I start trying it out.</p>
+<p>ninit's good enough if you've got a static configuration that doesn't have too many depends <br>
+that can be easily managed and that don't require too many static initializations. It also <br>
+doesn't seem to keep track of exit codes for error spotting (since a service could fail, but <br>
+report back as finished. This is especially bad in mounting cases unless you force the mount <br>
+to be verbose or write a wrapper to do something on that error). However, it'll happily report <br>
+if something failed to run if it was a continuous service. There also isn't much documentation <br>
+on what the nsvc -L output indicates. I'll try to document these later.</p>
+<p>For true depends for one-time initializations, I'd recommend something else (at least until I can <br>
+figure out how to patch the run helper in ninit to work around this). I'm thinking of maybe also <br>
+trying out busybox init+(monit or perp), initng, OpenRC, or initscripts-fork. <del>Currently, I'm <br>
+interested in trying monit (even though this'd probably be a little too big for my own needs) since <br>
+it does this dependency checking on its own and provides some additional security features that can <br>
+be coded (eg: stop running a compromised service). The only thing that scares me about it is that it <br>
+prefers pid files instead of being a direct parent of the process (as evidenced by with matching|pidfile <br>
+when asking what to check for a pid). I just need to figure out which init system to run it from before <br>
+I start trying it out.</del></p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="http://www.linuxfromscratch.org/pipermail/blfs-support/2004-March/049009.html">http://www.linuxfromscratch.org/pipermail/blfs-support/2004-March/049009.html</a></li>
