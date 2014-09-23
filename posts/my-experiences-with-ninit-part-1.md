@@ -35,6 +35,7 @@ the services you want in the correct order before halting.
 ## Depends aren't really "depends" - more like "start before"
 Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success or are running.
 Some ways to work around this include:
+
 * Specify the order daemons are started in like /etc/rc.conf, except with /etc/ninit/daemon/depends: Simple enough work around. 
 Everything's also started in parallel like this.
 * Patch ninit to include a separate file for services (opt) that specifies true deps that're only run once OR modifies the depends of certain services
