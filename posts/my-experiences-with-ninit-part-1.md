@@ -34,7 +34,10 @@ the services you want in the correct order before halting.
 [Edit]: Forgot to fill this section out. Basically, all that's needed for this is a setup file that echos out a simple message.
 
 ## Depends aren't really "depends" - more like "start before"
-Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success or are running.
+Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success ~~or are running~~. 
+Just ran some tests in my test box. Didn't seem to restart dbus even when I had two things dependent on it. However, statement about
+whether something finishes with success is still valid.
+
 Some ways to work around this include:
 
 * Specify the order daemons are started in like /etc/rc.conf, except with /etc/ninit/daemon/depends: Simple enough work around. 
