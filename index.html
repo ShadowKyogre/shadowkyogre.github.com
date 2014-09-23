@@ -199,6 +199,7 @@ doing shutdown preparations. ninit-shutdown also assumes quite a few things abou
 be cleaned up, so if you want more control, you're going to have to create a service to manually shutdown<br>
 the services you want in the correct order before halting.</p>
 <h3 id="optional-pretty-messages-for-every-section-started">Optional: pretty messages for every section started</h3>
+<p>[Edit]: Forgot to fill this section out. Basically, all that's needed for this is a setup file that echos out a simple message.</p>
 <h3 id="depends-arent-really-depends-more-like-start-before">Depends aren't really "depends" - more like "start before"</h3>
 <p>Title says it all. ninit won't actually check if the services that a service depends on have finished executing with success or are running.<br>
 Some ways to work around this include:</p>
@@ -212,12 +213,15 @@ is that using nsvc as a synced or waited service is NOT a good idea (nor as a se
 </ul>
 <h2 id="thoughts">Thoughts</h2>
 <p>ninit's good enough if you've got a static configuration that doesn't have too many depends that can be easily manually managed. It also doesn't seem to<br>
-keep track of exit codes for error spotting (since a service could fail, but report back as finished).  For true depends, I'd recommend something else <br>
-(at least until I can figure out how to patch the run helper in ninit to work around this). I'm thinking of maybe also trying out busybox init+(monit or perp), <br>
-initng, OpenRC, or initscripts-fork. Currently, I'm interested in trying monit (even though this'd probably be a little too big for my own needs) since <br>
-it does this dependency checking on its own and provides some additional security features that can be coded (eg: stop running a compromised service). <br>
-The only thing that scares me about it is that it prefers pid files instead of being a direct parent of the process (as evidenced by with matching|pidfile when<br>
-asking what to check for a pid). I just need to figure out which init system to run it from before I start trying it out.</p>
+keep track of exit codes for error spotting (since a service could fail, but report back as finished).  However, it'll happily report if something failed<br>
+to run if it was a continuous service. There also isn't much documentation on what the nsvc -L output incicates. I'll try to document these later.</p>
+<p>For true depends, I'd recommend something else (at least until I can figure out how to patch the run helper in ninit to work around this). <br>
+I'm thinking of maybe also trying out busybox init+(monit or perp), initng, OpenRC, or initscripts-fork. Currently, I'm interested in trying monit <br>
+(even though this'd probably be a little too big for my own needs) since it does this dependency checking on its own and provides some additional <br>
+security features that can be coded (eg: stop running a compromised service). The only thing that scares me about it is that it prefers pid files <br>
+instead of being a direct parent of the process (as evidenced by with matching|pidfile when asking what to check for a pid). I just need to figure out <br>
+which init system to run it from before I <br>
+start trying it out.</p>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="http://www.linuxfromscratch.org/pipermail/blfs-support/2004-March/049009.html">http://www.linuxfromscratch.org/pipermail/blfs-support/2004-March/049009.html</a></li>
