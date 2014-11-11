@@ -2,7 +2,7 @@
 .. title: Trying out Fish Shell
 .. slug: trying-out-fish-shell
 .. date: 2014-09-28 02:05:35 UTC-07:00
-.. tags: shell,fish
+.. tags: shell,fish,draft
 .. link: 
 .. description: 
 .. type: text
