@@ -187,12 +187,12 @@
 <noscript>
 <ul class="thumbnails">
         <li>
-<a href="sample-report-preview.png" class="thumbnail image-reference" title="Sample report preview">
-            <img src="sample-report-preview.thumbnail.png" alt="Sample report preview"></a>
-        </li>
-<li>
 <a href="chart-making-data.png" class="thumbnail image-reference" title="Chart making data">
             <img src="chart-making-data.thumbnail.png" alt="Chart making data"></a>
+        </li>
+<li>
+<a href="sample-report-preview.png" class="thumbnail image-reference" title="Sample report preview">
+            <img src="sample-report-preview.thumbnail.png" alt="Sample report preview"></a>
 </li>
 </ul>
 </noscript>
@@ -201,7 +201,7 @@
         <!--End of body content-->
 
         <footer>
-            Contents © 2014         <a href="mailto:shadowkyogre.public@gmail.com">ShadowKyogre</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2015         <a href="mailto:shadowkyogre.public@gmail.com">ShadowKyogre</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
     </div>
@@ -210,6 +210,8 @@
 
             <script src="../../../assets/js/jquery.min.js"></script>
             <script src="../../../assets/js/bootstrap.min.js"></script>
+            <script src="../../../assets/js/moment-with-locales.min.js"></script>
+            <script src="../../../assets/js/fancydates.js"></script>
         <script src="../../../assets/js/jquery.colorbox-min.js"></script>
     
 <!-- AddToAny BEGIN -->
@@ -233,7 +235,7 @@ a2a_config.color_arrow_hover = "fff";
     
 <script src="../../../assets/js/flowr.plugin.js"></script>
 <script>
-jsonContent = [{"url_thumb": "sample-report-preview.thumbnail.png", "size": {"w": 180, "h": 110}, "url": "sample-report-preview.png", "title": "Sample report preview"}, {"url_thumb": "chart-making-data.thumbnail.png", "size": {"w": 180, "h": 110}, "url": "chart-making-data.png", "title": "Chart making data"}];
+jsonContent = [{"size": {"w": 180, "h": 110}, "title": "Chart making data", "url": "chart-making-data.png", "url_thumb": "chart-making-data.thumbnail.png"}, {"size": {"w": 180, "h": 110}, "title": "Sample report preview", "url": "sample-report-preview.png", "url_thumb": "sample-report-preview.thumbnail.png"}];
 $("#gallery_container").flowr({
         data : jsonContent,
         height : 180*.6,

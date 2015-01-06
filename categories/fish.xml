@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>ShadowKyogre's GitHub (fish)</title><link>/</link><description></description><atom:link type="application/rss+xml" rel="self" href="/categories/fish.xml"></atom:link><language>en</language><lastBuildDate>Tue, 06 Jan 2015 07:48:39 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Trying out Fish Shell</title><link>/posts/trying-out-fish-shell/</link><dc:creator>ShadowKyogre</dc:creator><description>&lt;div&gt;&lt;p&gt;I changed my current shell in stjerm and lilyterm to fish a few months ago. I &lt;br&gt;
+can't believe why I wasn't using this before since it's like having kupfer on&lt;br&gt;
+the commandline in terms of ease of use. Of course, I had to port my aliases&lt;br&gt;
+and some of my functions over to fish, but that was pretty easy to do.&lt;/p&gt;
+&lt;h2 id="resources"&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fish-shell/fish-shell/issues/924"&gt;Where I found out about using expr from coreutils to fill in for missing string manip functionality&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fish-shell/fish-shell/issues/159"&gt;In case you need multiline text literally in env vars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Confused on how to split strings into arrays? Just try this: &lt;code&gt;count (echo 0:0:0|sed 's/:/\n/g')&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;And of course, my &lt;a href="https://github.com/shadowkyogre/dotfiles"&gt;dotfiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>fish</category><category>shell</category><guid>/posts/trying-out-fish-shell/</guid><pubDate>Tue, 06 Jan 2015 15:44:51 GMT</pubDate></item></channel></rss>
